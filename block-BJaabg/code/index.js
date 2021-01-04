@@ -14,27 +14,31 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
-// for(let i= PHONE_PRICE; i<= bank_balance; i*2) {
-//     for(j= ACCESSORY_PRICE; j<= SPENDING_THRESHOLD; j*2) {
-//         if(amount <= bank_balance){
-//             amount = PHONE_PRICE + ACCESSORY_PRICE;
-//             console.log(amount);
-
-//         }
-        
+// while(bank_balance >= 0) {
+//     console.log(amount)
+//     amount += PHONE_PRICE;
+//     bank_balance -= amount;
+//     while(amount <= SPENDING_THRESHOLD) {
+//         console.log(amount)
+//         amount += ACCESSORY_PRICE;
+//         console.log(amount)
 //     }
-// }
-let i = PHONE_PRICE;
-while(i < bank_balance) {
-    amount += PHONE_PRICE;
-    // console.log(amount);
-    let j= ACCESSORY_PRICE;
-    while(j < SPENDING_THRESHOLD) { 
-        amount += ACCESSORY_PRICE;
-    }
-    console.log(amount);
 
+// }
+// console.log(amount);
+// amount = amount + (TAX_RATE *100);
+// alert(amount);
+// ⛑ Answer of the above will `$334.76`.
+
+
+for(i = PHONE_PRICE;  amount <= bank_balance ;){
+    for(j = ACCESSORY_PRICE; amount<= SPENDING_THRESHOLD;) {
+        amount += (j + i);
+        // bank_balance -=amount;
+    }
+    amount += i;
+    bank_balance -= amount;
 }
 console.log(amount);
-
-// ⛑ Answer of the above will `$334.76`.
+amount = amount + (TAX_RATE * 100);
+alert(amount);
