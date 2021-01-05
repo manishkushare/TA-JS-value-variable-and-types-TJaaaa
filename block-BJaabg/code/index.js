@@ -31,14 +31,28 @@ var amount = 0;
 // ⛑ Answer of the above will `$334.76`.
 
 
-for(i = PHONE_PRICE;  amount <= bank_balance ;){
-    for(j = ACCESSORY_PRICE; amount<= SPENDING_THRESHOLD;) {
-        amount += (j + i);
-        // bank_balance -=amount;
+// for(let i = PHONE_PRICE;  amount <= bank_balance ;){
+//     for(let j = ACCESSORY_PRICE; amount<= SPENDING_THRESHOLD;) {
+//         amount += (j + i);
+//         // bank_balance -=amount;
+//     }
+//     amount += i;
+//     // bank_balance -= amount;
+// }
+// console.log(amount);
+// amount = amount + (TAX_RATE * 100);
+// alert(amount);
+
+
+for(let i = amount; i<=bank_balance;) {
+    amount += P;
+
+    
+    if(amount <= SPENDING_THRESHOLD) {
+        amount += (PHONE_PRICE + ACCESSORY_PRICE);
+        i += amount;
     }
-    amount += i;
-    bank_balance -= amount;
 }
 console.log(amount);
-amount = amount + (TAX_RATE * 100);
+amount = amount + (TAX_RATE *100);
 alert(amount);
