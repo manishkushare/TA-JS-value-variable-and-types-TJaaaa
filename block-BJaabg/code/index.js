@@ -70,5 +70,6 @@ var amount = 0;
     if(amount <= SPENDING_THRESHOLD){
         amount +=  ACCESSORY_PRICE + (ACCESSORY_PRICE * TAX_RATE);
     }
-    console.log(`$${amount}`);  
-  }
+    console.log("test");
+}
+console.log(`$${amount}`);  
