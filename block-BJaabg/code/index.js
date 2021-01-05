@@ -43,15 +43,32 @@ var amount = 0;
 // amount = amount + (TAX_RATE * 100);
 // alert(amount);
 
-
-for(let i = PHONE_PRICE; amount<=bank_balance;) {
-    amount += PHONE_PRICE;
-
+ 
+// for(let i = PHONE_PRICE; amount < bank_balance; ) {
+//     amount += i;
+//     console.log(amount);
     
-    if(amount <= SPENDING_THRESHOLD) {
-        amount += (PHONE_PRICE + ACCESSORY_PRICE);
+//     if(amount <= SPENDING_THRESHOLD) {
+//         amount += (PHONE_PRICE + ACCESSORY_PRICE);
+//     }
+// }
+// console.log(amount);
+// amount = amount * TAX_RATE;
+// console.log(amount);
+// alert(amount);
+
+// while (amount <= bank_balance) {
+//     amount = amount + PHONE_PRICE + (PHONE_PRICE * TAX_RATE);
+//     if (amount < SPENDING_THRESHOLD) {
+//       amount = amount + ACCESSORY_PRICE + ACCESSORY_PRICE * TAX_RATE;
+//     }
+//     console.log("total amount", amount);
+//   }
+
+  for(;amount <= bank_balance;) {
+    amount +=  PHONE_PRICE + (PHONE_PRICE * TAX_RATE);
+    if(amount <= SPENDING_THRESHOLD){
+        amount +=  ACCESSORY_PRICE + (ACCESSORY_PRICE * TAX_RATE);
     }
-}
-console.log(amount);
-amount = amount + (TAX_RATE *100);
-alert(amount);
+    console.log(`$${amount}`);  
+  }
