@@ -44,13 +44,12 @@ var amount = 0;
 // alert(amount);
 
 
-for(let i = amount; i<=bank_balance;) {
-    amount += P;
+for(let i = PHONE_PRICE; amount<=bank_balance;) {
+    amount += PHONE_PRICE;
 
     
     if(amount <= SPENDING_THRESHOLD) {
         amount += (PHONE_PRICE + ACCESSORY_PRICE);
-        i += amount;
     }
 }
 console.log(amount);
